@@ -1,0 +1,5 @@
+js: yarn start
+css: yarn start:css
+bot: rails telegram:bot:poller
+sidekiq: sidekiq
+web: rails s -p 3000

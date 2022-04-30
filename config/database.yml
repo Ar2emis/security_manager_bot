@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  password: postgres
+  pool: <%= ENV.fetch('RAILS_MAX_THREADS', 5) %>
+  url: <%= ENV['DATABASE_URL'] %>
+
+development:
+  <<: *default
+  database: security_manager_bot_development
+
+test:
+  <<: *default
+  database: security_manager_bot_test
+
+production:
+  <<: *default
+  database: security_manager_bot_production
